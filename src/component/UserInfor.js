@@ -43,8 +43,8 @@ class UserInfor extends React.Component {
                 <div>city: <span>{this.state.city} </span>  &&  age: <span>{this.state.age}</span></div>
                 <button onClick={(event) => { this.onclick(event) }}>Click Me</button>
                 <button onMouseOver={this.hoverme}>Hover Me</button>
-                <form onSubmit={(event) => { this.submitForm(event) }}>
-                    <input type="text" placeholder="enter name..." onChange={(event) => { this.changeStateInputName(event) }} value={this.state.name} />
+                <form onSubmit={(event) => { this.props.onsubmit(event) }}>
+                    <input type="text" placeholder="enter name..." onChange={(event) => { this.changeStateInputName(event) }} value={this.state.name} name="trang" />
                     <input type="text" placeholder="enter age..." onChange={(event) => { this.changeStateInputAge(event) }} value={this.state.age} />
                     <button>submit</button>
                 </form>
