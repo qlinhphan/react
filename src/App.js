@@ -2,22 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
-import MyComponent from './component/MyComponent';
-import React from 'react';
-// const App = () => {
-//   const count = useSelector(state => state.counter.count);
-//   const dispatch = useDispatch();
 
-//   return (
-//     <MyComponent></MyComponent>
-//   );
-// }
+import React from 'react';
+import Header from './component/Header/Header';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <MyComponent></MyComponent>
+        <Header></Header>
       </div>
     )
   }
