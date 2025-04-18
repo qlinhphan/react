@@ -3,7 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "../Home/video.scss"
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Link, NavLink
+} from "react-router-dom";
 const Header = (props) => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -12,10 +18,9 @@ const Header = (props) => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">User</Nav.Link>
-                        <Nav.Link href="#link">Admin</Nav.Link>
-
+                        <NavLink to="/" className='nav-link'>Home</NavLink>
+                        <NavLink to="/user" className='nav-link'>User</NavLink>
+                        <NavLink to="/admin" className='nav-link'>Admin</NavLink>
                     </Nav>
                     <Nav>
                         <NavDropdown title="Setting" id="basic-nav-dropdown">
